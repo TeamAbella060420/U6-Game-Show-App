@@ -19,9 +19,7 @@ const phrasesArr = [
   'take chances and make mistakes',
   'happiness is an attitude',
   'life is a gift',
-  'today is a new beginning',
-  'to god be the glory',
-  'i love my wife'
+  'today is a new beginning'
 ];
 
 const win = document.createElement('p');
@@ -54,6 +52,7 @@ startButton.addEventListener('click', function(){
     overlay.classList.remove('lose');
     overlay.style.display = 'none';
   }
+  
   // Initialize the game
   init();
 });
@@ -249,7 +248,6 @@ function init() {
   img.style.repeat = 'norepeat';
   img.src = "images/liveHeart.png";
   listItem.appendChild(img);
-
   for (let i = 0; i < 5; i++) {
     scoreboard.appendChild(listItem.cloneNode(true));
   }
