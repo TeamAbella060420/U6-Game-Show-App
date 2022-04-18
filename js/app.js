@@ -52,7 +52,6 @@ startButton.addEventListener('click', function(){
     overlay.classList.remove('lose');
     overlay.style.display = 'none';
   }
-  
   // Initialize the game
   init();
 });
@@ -210,17 +209,13 @@ qwerty.addEventListener('click', function(evt){
       // console.log('good job!');
       checkWin();
     } else {
-      // remove a try
-      // 1: increment the guessesMissed variable
+
+      // get all of heart image
+      const tries = document.querySelectorAll('.tries img');
+      // Change the heart image
+      tries[guessesMissed].src = 'images/lostHeart.png';
+      // 1: increment the guessesMisses variable
       guessesMissed++;
-
-      // 2: update the DOM - remove a try
-      // get the OL
-      const scoreboard = document.querySelector('#scoreboard').firstElementChild;
-
-      // get all list items with class 'tries'
-      const tries = document.querySelectorAll('.tries');
-      scoreboard.removeChild( tries[0] );
 
       checkWin();
     }
@@ -248,6 +243,7 @@ function init() {
   img.style.repeat = 'norepeat';
   img.src = "images/liveHeart.png";
   listItem.appendChild(img);
+
   for (let i = 0; i < 5; i++) {
     scoreboard.appendChild(listItem.cloneNode(true));
   }
