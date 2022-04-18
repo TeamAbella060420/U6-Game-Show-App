@@ -24,7 +24,7 @@ const phrasesArr = [
 
 const win = document.createElement('p');
 win.classList.add('message');
-win.textContent = 'Congratulations!!';
+win.textContent = 'Congratulations!!!';
 
 const lose = document.createElement('p');
 lose.classList.add('message');
