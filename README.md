@@ -1,4 +1,4 @@
-# TechDegree Project 7: Build a Game Show App
+# U6-Game-SHOW-APP
 
 This word-guessing game is built with JavaScript. Some JavaScript concepts you'll find underneath the hood include:
 + arrays
